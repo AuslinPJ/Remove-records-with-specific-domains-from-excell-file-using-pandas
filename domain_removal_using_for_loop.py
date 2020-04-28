@@ -40,13 +40,14 @@ class MyExcelWindow:
         self.fileentry.delete(0,END)
         self.fileentry.insert(0,filename)   
         
-
+    # Method to select folder
     def select_folder_path(self):
         filename = filedialog.askdirectory(title ='open')
         self.folderpath = filename.replace('/','\\')
         self.folderentry.delete(0,END)
         self.folderentry.insert(0,self.folderpath)
 
+    # Method to remove domain
     def remove_domain(self):
 
         #  read template file
